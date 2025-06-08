@@ -1,0 +1,11 @@
+body{
+  background-color: rgb(227, 247, 241);
+}
+.cursor-pointer {
+  cursor: pointer;
+  }
+
+  a, button {
+    cursor: pointer;
+  }
+

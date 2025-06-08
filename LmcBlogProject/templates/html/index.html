@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMC博客</title>
+  <link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+  <script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+  <script src="{% static 'bootstrap5/bootstrap.min.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+  <header>
+    <div class="px-3 py-2 text-bg-dark bg-success border-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <img src=" {% static 'images/logo.png' %}" alt="logo加载错误" height="60">
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#home"></use>
+                </svg>
+                首页
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#speedometer2"></use>
+                </svg>
+                发布博客
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                留言板
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#people-circle"></use>
+                </svg>
+                联系我们
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="px-3 py-2 border-bottom mb-3">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+          <input type="search" class="form-control" placeholder="搜索..." aria-label="Search">
+        </form>
+  
+        <div class="text-end">
+          <button type="button" class="btn btn-light text-dark me-2">登录</button>
+          <button type="button" class="btn btn-success">注册</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container bg-white p-3 border border-success-subtle rounded">
+    <h2>博客列表</h2>
+    <div class="row row-cols-3 ">
+      <div class="col">
+        <div class="card border-success mb-3 p-3 ms-2" style="max-width: 25rem;">
+          <div class="card-header bg-transparent border-success" style="font-weight: bold;">Django基础项目实战</div>
+          <div class="card-body text-dark" >
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-success">详情</a>
+          </div>
+          <div class="card-footer bg-transparent border-success d-flex justify-content-between">
+            <div>
+              <img src="{% static 'images/4.jpeg' %}" class="rounded-circle" width="40" height="40" alt="头像加载错误">
+              知了课堂
+            </div>
+            <div>2025年5月2日 1:08</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-success mb-3 p-3 ms-2" style="max-width: 25rem;">
+          <div class="card-header bg-transparent border-success" style="font-weight: bold;">Django基础项目实战</div>
+          <div class="card-body text-dark">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
+            <a href="#" class="btn btn-success">详情</a>
+          </div>
+          <div class="card-footer bg-transparent border-success d-flex justify-content-between">
+            <div>
+              <img src="{% static 'images/4.jpeg' %}" class="rounded-circle" width="40" height="40" alt="头像加载错误">
+              知了课堂
+            </div>
+            <div>2025年5月2日 1:08</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card border-success mb-3 p-3 ms-2" style="max-width: 25rem;">
+          <div class="card-header bg-transparent border-success" style="font-weight: bold;">Django基础项目实战</div>
+          <div class="card-body text-dark">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.
+            </p>
+            <a href="#" class="btn btn-success">详情</a>
+          </div>
+          <div class="card-footer bg-transparent border-success d-flex justify-content-between">
+            <div>
+              <img src="{% static 'images/4.jpeg' %}" class="rounded-circle" width="40" height="40" alt="头像加载错误">
+              知了课堂
+            </div>
+            <div>2025年5月2日 1:08</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

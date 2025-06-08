@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}博客详情{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'highlight/styles/github-dark.min.css' %}">
+  <script src="{% static 'highlight/highlight.min.js' %}"></script>
+{% endblock %}
+
+{% block main%}
+<h2>{{ Blog.title }}</h2>
+<hr>
+<div class="mt-2">
+  <img src="{% static 'images/4.jpeg' %}" class="rounded-circle" width="40" height="40" alt="头像加载错误">
+  <span class="ms-2">{{ Blog.author.username }}</span>
+  <span class="ms-2" style="color: #999;">{{ Blog.pub_time | date:"Y年m月d日 H时i分" }}</span> 发布
+</div>
+<hr>
+<div class="py-2">
+  {{ Blog.content | safe }}
+</div>
+<hr>
+<div class="mt-2">
+  <h5>评论({{Blog.comments.all | length}})</h5>
+  <form action="{% url 'Blog:pub_comment' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="blog_id" value="{{Blog.id}}">
+    <div class="mt-2">
+      <input type="text" class="form-control" placeholder="请输入评论" name="content">
+    </div>
+    <div class="text-end mt-2">
+      <button type="submit" class="btn btn-success">评论</button>
+    </div>
+  </form>
+</div>
+<div class="mt-2">
+  <ul class="list-group list-group-flush">
+    {% for comment in Blog.comments.all %}
+      <li class="list-group-item mb-2">
+        <div class="d-flex justify-content-between ">
+          <div class="user-info">
+            <img src="{% static 'images/4.jpeg' %}" class="rounded-circle" width="40" height="40" alt="头像加载错误">
+            <span class="ms-2 text-body-secondary">{{ comment.author.username }}</span>
+          </div>
+          <div class="create-time text-body-tertiary" style="line-height: 40px;color: #999;">{{ comment.pub_time | date:"Y年m月d日 H时i分" }}</div>
+        </div>
+        <div class="mt-2">{{ comment.content }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+  <script>
+    hljs.highlightAll();
+  </script>
+{% endblock %}

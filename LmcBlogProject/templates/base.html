@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}{% endblock %}-LMC博客</title>
+<link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+<script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+<script src="{% static 'bootstrap5/bootstrap.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<script>
+  function showNotImplemented() {
+    alert('该功能暂未实现');
+    // 如果想阻止默认跳转（因为 href 设为了 javascript:void(0)，这里也可省略 return false ）
+    return false;
+  }
+</script>
+{% block head %}{% endblock %}
+</head>
+
+<body>
+  <header>
+    <div class="px-3 py-2 text-bg-dark bg-success border-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <img src=" {% static 'images/logo.png' %}" alt="logo加载错误" height="60">
+          </a>
+
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small" >
+            <li >
+              <a href="/" class="nav-link text-white ">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#home"></use>
+                </svg>
+                首页
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'Blog:pub_blog' %}" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#speedometer2"></use>
+                </svg>
+                发布博客
+              </a>
+            </li>
+            <li>
+              <a href="" class="nav-link text-white " onclick="showNotImplemented()">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                留言板     
+              </a>
+            </li>
+            <li>
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#grid"></use>
+              </svg>
+              <div class="btn-group">
+                <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  联系我们
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">QQ邮箱</a></li>
+                  <li><a class="dropdown-item" href="https://github.com/LIU2020822LMC">github</a></li>
+                  <li><a class="dropdown-item" href="#">QQ</a></li>
+                </ul>        
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="px-3 py-2 border-bottom mb-3">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto d-flex" role="search" action="{%url 'Blog:search'%}" method="GET">
+          <div class="input-group">
+            <input type="search" name="M" class="form-control" placeholder="搜索..." aria-label="Search" >
+            <button class="btn btn-success" type="submit">查询</button>
+          </div> 
+        </form>
+
+        {% if user.is_authenticated %}
+        <div class="dropdown text-end">
+           <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> 
+            <img src="{% static 'images/4.jpeg' %}" alt="error" width="40" height="40" class="rounded-circle"> </a> 
+            <ul class="dropdown-menu text-small" >  
+              <li><a class="dropdown-item" href="{% url 'LMCauth:logout' %}">退出登录</a></li> 
+            </ul> 
+          </div>
+        {% else %}
+        <div class="text-end">
+          <a href="{% url 'LMCauth:login' %}" type="button" class="btn btn-light text-dark me-2">登录</a>
+          <a href="{% url 'LMCauth:register' %}" type="button" class="btn btn-success">注册</a>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </header>
+  <main class="container bg-white p-3 border border-success-subtle rounded">
+    {% block main %}{% endblock %}
+  </main>
+</body>
+
+</html>

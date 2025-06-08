@@ -1,0 +1,5 @@
+[client]
+database = lmc-blog-project
+user = root
+password = LIUyuxuan2020822
+default-character-set = utf8

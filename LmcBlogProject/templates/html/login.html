@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LMC博客</title>
+<link rel="stylesheet" href="{% static 'bootstrap5/bootstrap.min.css' %}">
+<script src="{% static 'bootstrap5/popper.min.js' %}"></script>
+<script src="{% static 'bootstrap5/bootstrap.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body>
+  <header>
+    <div class="px-3 py-2 text-bg-dark bg-success border-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <img src=" {% static 'images/logo.png' %}" alt="logo加载错误" height="60">
+          </a>
+
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#home"></use>
+                </svg>
+                首页
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#speedometer2"></use>
+                </svg>
+                发布博客
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#grid"></use>
+                </svg>
+                留言板
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#people-circle"></use>
+                </svg>
+                联系我们
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="px-3 py-2 border-bottom mb-3">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+          <input type="search" class="form-control" placeholder="搜索..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-light text-dark me-2">登录</button>
+          <button type="button" class="btn btn-success">注册</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container bg-white p-3 border border-success-subtle rounded">
+    <div style="max-width: 330px;" class="m-auto">
+      <h2 style="text-align: center;">登录</h2>
+      <form action="" method="post">
+        <div class="mb-3">
+          <label >邮箱</label>
+          <input type="email" name="email" class="form-control" placeholder="请输入邮箱">
+        </div>
+        <div class="mb-3">
+          <label >密码</label>
+          <input type="password" name="password" class="form-control" placeholder="请输入密码">
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" name="remember" value="1" id="checkDefault">
+          <label class="form-check-label" for="checkDefault">
+           记住我
+          </label>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-success w-100">立即登录</button>
+        </div>
+      </form>
+    </div>
+
+  </main>
+</body>
+
+</html>
