@@ -31,7 +31,7 @@ python -m venv venv
 5.安装所需的依赖
 
 ``` bash
-pip install -r requirements.txt
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 6.进入LmcBlogProject
@@ -49,7 +49,7 @@ python manage.py migrate
 8.最后执行下面这条命令
 
 ```bash
-python manage.py runserver  -i https://pypi.tuna.tsinghua.edu.cn/simple
+python manage.py runserver  
 ```
 
 9.执行完上面这条命令后会有产生本地的服务链接，将链接复制到浏览器就可以看到了本项目的结果了（记住不要开酷狗音乐，因为酷狗音乐的端口与Django的端口冲突）
