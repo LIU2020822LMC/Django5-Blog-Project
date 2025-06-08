@@ -20,7 +20,9 @@
 
 5.安装所需的依赖
 
-``` bahs pip install -r requirements.txt
+``` bahs
+pip install -r requirements.txt
+```
 
 4.最后执行下面这条命令
 
