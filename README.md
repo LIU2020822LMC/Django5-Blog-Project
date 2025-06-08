@@ -20,5 +20,6 @@
 
 5.执行完上面这条命令后会有产生本地的服务链接，点击进入就可以在浏览器查看完整项目的运行了（记住不要开酷狗音乐，因为酷狗音乐的端口与Django的端口冲突）
 
-![image](https://github.com/user-attachments/assets/91ee89f2-308f-42a9-a9bd-d015a553617c)
+![image](https://github.com/user-attachments/assets/0431cc21-df2f-4e64-b902-7804c6843171)
+
 
