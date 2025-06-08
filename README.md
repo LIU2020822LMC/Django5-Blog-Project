@@ -51,6 +51,7 @@ python manage.py runserver
 ```bash
 http://127.0.0.1:8000/
 ```
+
 ![image](https://github.com/user-attachments/assets/0431cc21-df2f-4e64-b902-7804c6843171)
 
 
