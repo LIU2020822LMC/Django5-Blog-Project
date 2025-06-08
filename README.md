@@ -46,8 +46,11 @@ cd LmcBlogProject
 python manage.py runserver
 ```
 
-8.执行完上面这条命令后会有产生本地的服务链接，点击进入就可以在浏览器查看完整项目的运行了（记住不要开酷狗音乐，因为酷狗音乐的端口与Django的端口冲突）
+8.执行完上面这条命令后会有产生本地的服务链接，将链接复制到浏览器就可以看到了本项目的结果了（记住不要开酷狗音乐，因为酷狗音乐的端口与Django的端口冲突）
 
+```bash
+http://127.0.0.1:8000/
+```
 ![image](https://github.com/user-attachments/assets/0431cc21-df2f-4e64-b902-7804c6843171)
 
 
