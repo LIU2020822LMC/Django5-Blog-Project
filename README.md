@@ -40,13 +40,19 @@ pip install -r requirements.txt
 cd LmcBlogProject
 ```
 
-7.最后执行下面这条命令
+7.应用数据库迁移
 
 ```bash
-python manage.py runserver
+python manage.py migrate
 ```
 
-8.执行完上面这条命令后会有产生本地的服务链接，将链接复制到浏览器就可以看到了本项目的结果了（记住不要开酷狗音乐，因为酷狗音乐的端口与Django的端口冲突）
+8.最后执行下面这条命令
+
+```bash
+python manage.py runserver  -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+9.执行完上面这条命令后会有产生本地的服务链接，将链接复制到浏览器就可以看到了本项目的结果了（记住不要开酷狗音乐，因为酷狗音乐的端口与Django的端口冲突）
 
 ```bash
 http://127.0.0.1:8000/
