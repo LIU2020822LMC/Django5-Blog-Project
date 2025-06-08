@@ -6,13 +6,21 @@
 
 `git clone https://github.com/LIU2020822LMC/Django5-Blog-Project.git` 
 
-2.用vscode进入项目文件夹然后在终端（在vscode按住ctrl+`即可进入终端）执行进入虚拟环境的命令
+2.进入本项目
 
-`bin\activate`
+`cd Django5-Blog-Project`
 
-3.在终端执行进入LmcBlogProject文件夹的命令
+3.设置虚拟环境
 
-`cd LmcBlogProject`
+`python -m venv venv`
+
+4.启动虚拟环境
+
+`.\venv\Scripts\activate`
+
+5.安装所需的依赖
+
+``` bahs pip install -r requirements.txt
 
 4.最后执行下面这条命令
 
