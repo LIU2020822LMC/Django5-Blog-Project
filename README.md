@@ -6,7 +6,7 @@
 
 `git clone https://github.com/LIU2020822LMC/Django5-Blog-Project.git` 
 
-2.进入项目文件夹然后在终端执行进入虚拟环境的命令
+2.用vscode进入项目文件夹然后在终端（在vscode按住ctrl+`即可进入终端）执行进入虚拟环境的命令
 
 `bin\activate`
 
